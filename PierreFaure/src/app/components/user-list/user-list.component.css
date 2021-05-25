@@ -1,0 +1,11 @@
+.editar{
+  margin: 5%
+}
+
+.card-body{
+  display: flex;
+}
+
+.uno{
+  margin-bottom: 1em;
+}

@@ -1,0 +1,52 @@
+<header>
+  <app-usuarios></app-usuarios>
+</header>
+<body>
+  <div class="col-md-4 offset-md-4">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="text-center">Nuevo Usuario</h2>
+        <br>
+        <form>
+          <div class="form-group">
+            <label for="nombre_s">Tipo de usuario:</label>
+            <br>
+            <select  name="tipo_usuario" id="tipo_usuario" [(ngModel)]="user.id_tipo_usuario" [ngModelOptions]="{standalone: true}">
+              <option disabled selected>Selecciona el tipo de usuario</option>
+              <option *ngFor= "let tu of tipos" value={{tu.id_tipo_usuario}}>
+                {{tu.tipo_usuario}}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="nombre_s">Nombre(s):</label>
+            <input type="text" name="nombre_s" [(ngModel)]="user.nombre_s" [ngModelOptions]="{standalone: true}" placeholder="Nombre(s) del alumno" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <label for="apellido_pat">Apellido Paterno:</label>
+            <input type="text" name="apellido_pat" [(ngModel)]="user.ape_pat"  [ngModelOptions]="{standalone: true}" placeholder="Apellido Paterno" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <label for="apellido_mat">Apellido materno:</label>
+            <input type="text" name="apellido_mat" [(ngModel)]="user.ape_mat" [ngModelOptions]="{standalone: true}"  placeholder="Apellido Materno" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" name="usuario" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" placeholder="E-Mail" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <label for="password">Contraseña:</label>
+            <input type="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" placeholder="Contraseña" class="form-control" autofocus>
+          </div>
+          <br>
+          <div class="botones">
+            <button  class="btn guardar btn-block" (click) = " edit ? updateUser() : saveNewUser()" >Guardar</button>
+            <button  class="btn btn-danger btn-block" (click) = "back()" >Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+

@@ -1,0 +1,13 @@
+.calendar{
+  float: right;
+}
+
+.message{
+  margin-top:3%;
+  float:left;
+}
+
+h1{
+  font-size: 400%;
+  color: #273c75;
+}

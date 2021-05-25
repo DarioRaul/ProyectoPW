@@ -1,0 +1,28 @@
+ul{
+  margin-left: 15%;
+  text-align: center;
+}
+
+li{
+  padding-right: 50px;
+}
+
+
+.navbar-brand{
+  margin-left: 8%;
+}
+
+.logo{
+  margin-left: 6%;
+  width: 20%;
+  cursor: pointer;
+}
+
+.navbar{
+  margin-bottom: 1em;
+}
+
+*{
+  background-color: #dcdde1;
+  padding: 0%;
+}

@@ -1,0 +1,101 @@
+*{
+  text-align: center;
+}
+
+h1, h2, h4{
+  color: #273c75;
+}
+
+.container{
+  display: block;
+  text-align: center;
+}
+
+.cabeceras{
+  display: inline-block;
+}
+
+.uno{
+  margin-right: 40%;
+  margin-left: 5%;
+}
+
+.mision, .vision{
+  border: 3px solid #ff6b6b;
+  display: inline-block;
+  border-radius: 20%;
+  padding: 2%;
+}
+
+.mision{
+  margin: 3%;
+  margin-right: 5%;
+}
+
+ul{
+  margin-top: 5%;
+  list-style: none;
+  display: flex;
+}
+
+figure{
+  position: relative;
+}
+
+figure:hover figcaption{
+  display: block;
+}
+
+figcaption{
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: justify;
+  background: rgba(0, 0, 0, .6);
+  color: white;
+  font: 15px/30px Verdana;
+  border-radius: 100%;
+  transition: background .4s;
+}
+
+footer {
+  box-sizing: border-box;
+  text-align: center;
+  background: #273c75;
+  color: white;
+  padding: 2.1%;
+  margin-top: 4%;
+}
+
+.desc{
+  color: #273c75;
+  margin-left: 5%;
+}
+
+.first{
+  margin-left: 11%;
+}
+
+.final{
+  list-style: none;
+  display: flex;
+}
+
+.ubi{
+  width: 5%;
+}
+.cont{
+  margin-left: 7%;
+}
+
+.ubicacion{
+  cursor: pointer;
+}
+
+abbr{
+  color: #273c75;
+  font-size: 30px;
+}

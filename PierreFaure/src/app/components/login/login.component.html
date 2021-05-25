@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio Sesión</title>
+</head>
+<header>
+  <app-navegacion></app-navegacion>
+</header>
+<body>
+  <ul class= "contenido">
+    <li>
+      <div class="box-image">
+        <img  class="imagen" src="../../../assets/images/clases.jpg" alt="Clases">
+      </div>
+    </li>
+    <li>
+      <div class="box">
+        <form class="item">
+          <h1>Inicio Sesion</h1>
+          <br>
+            <ul>
+              <li>
+                <label for="password">E-Mail:</label>
+              </li>
+              <li>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" required autofocus>
+              </li>
+              <li>
+                <label for="password">Contraseña: </label>
+              </li>
+              <li>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}"  required>
+              </li>
+            </ul>
+            <br>
+        </form>
+        <button type="submit" style="cursor: pointer;" (click)="loginIn()">Iniciar Sesión</button>
+      </div>
+    </li>
+  </ul>
+  <br>
+  <footer>
+    <p>Derechos Reservados &copy; Colegio Pierre Faure 2021.</p>
+  </footer>
+</body>
+</html>

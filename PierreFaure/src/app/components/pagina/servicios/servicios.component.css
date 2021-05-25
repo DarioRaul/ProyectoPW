@@ -1,0 +1,79 @@
+
+*{
+  text-align: center;
+}
+
+.preescolar{
+  width: 300px;
+  margin: auto;
+}
+
+.guarderia {
+  width: 300px;
+  margin: auto;
+}
+
+.clubtareas{
+  width: 300px;
+  margin: auto;
+}
+
+.actextr{
+  width: 300px;
+  margin: auto;
+}
+
+.uno{
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  color: black;
+  text-align: justify;
+}
+
+
+ul{
+  display: flex;
+  list-style: none;
+}
+
+h1,h2, h3{
+  color: #273c75;
+}
+
+.servicios{
+  background: #dcdde1;
+  color: #ff6b6b;
+  box-shadow: 0 0 20px 10px;
+}
+
+h6{
+  text-align: center;
+}
+
+
+footer{
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid black;
+  background: #273c75;
+  color: white;
+  padding: 2%;
+  }
+
+  .final{
+    list-style: none;
+    display: flex;
+  }
+
+  .ubi{
+    width: 5%;
+  }
+
+  .cont{
+    margin-left: 7%;
+  }
+
+  .ubicacion{
+    cursor: pointer;
+  }
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="pagos.component.css" />
+  </head>
+
+  <body>
+    <header>
+      <img
+        class="Logo"
+        src="/assets/images/logolargo.png"
+        alt="Logo Pierre Faure"
+        width="37%"
+      />
+      <hr />
+    </header>
+    <div class="formulario">
+      <div class="anchoformulario">
+        <h2 class="sub">Pago de servicios</h2>
+        <br /><br />
+        <label class="cabeceras">Nombre del alumno:</label>
+        <label class="informacion">Josué Hiram</label><br /><br />
+        <label class="cabeceras">Apellido Paterno:</label>
+        <label class="informacion">Álvarez</label><br /><br />
+        <label class="cabeceras">Apellido Materno:</label>
+        <label class="informacion">Martínez</label><br /><br />
+        <label class="cabeceras">Grado:</label>
+        <label class="informacion">3°</label><br /><br />
+        <label class="cabeceras">Grupo:</label>
+        <label class="informacion">B</label><br /><br /><br /><br />
+        <h2 class="total">Total a pagar: $1500</h2>
+        <br /><br />
+      </div>
+    </div>
+    <br>
+    <div class="boton">
+      <input
+        class="cancelar"
+        name="submit"
+        type="button"
+        value="Cancelar"
+        (click)="cancelar()"
+      />
+     <a href="https://mpago.la/2GbwoaP" target="_blank"> <input class="pago" name="submit" type="button" value="Pagar" /></a>
+  </div>
+    <footer>
+      <p>Derechos Reservados &copy; Colegio Pierre Faure 2021.</p>
+    </footer>
+  </body>
+</html>
+

@@ -1,0 +1,39 @@
+*{
+  background-color: #dcdde1;
+  padding: 0%;
+  color: #273c75;
+}
+.logo{
+  margin-left: 6%;
+  width: 20%;
+  cursor: pointer;
+}
+
+ul{
+  margin-left: 10%;
+  text-align: center;
+}
+
+li{
+  padding-right: 50px;
+}
+
+form{
+  margin-right: 8%;
+}
+
+.navbar-brand{
+  margin-left: 8%;
+}
+
+.logo{
+  margin-left: 6%;
+  width: 20%;
+  cursor: pointer;
+}
+
+.menu{
+  margin-bottom: 4em;
+}
+
+

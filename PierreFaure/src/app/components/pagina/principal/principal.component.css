@@ -1,0 +1,76 @@
+* {
+  text-align: center;
+}
+
+h1 {
+  color: #273c75;
+}
+
+footer {
+  box-sizing: border-box;
+  text-align: center;
+  background: #273c75;
+  color: white;
+  padding: 2.1%;
+  margin-top: 6%;
+}
+
+.box {
+  background: white;
+  padding: 2em;
+  color: #ff6b6b;
+  box-shadow: 0 0 20px 10px;
+}
+
+.container {
+  width: 1000px;
+}
+
+.banner {
+  width: 60%;
+  cursor: pointer;
+}
+
+.marco {
+  border: 4px solid #273c75;
+}
+
+.valores-1 {
+  list-style: none;
+  display: flex;
+}
+
+.valores-2{
+  width: 60%;
+  cursor: pointer;
+}
+
+.valores{
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+.desc{
+  color: #273c75;
+  margin-left: 5%;
+}
+
+.first{
+  margin-left: 8%;
+}
+
+.final{
+  list-style: none;
+  display: flex;
+}
+
+.ubi{
+  width: 5%;
+}
+.cont{
+  margin-left: 7%;
+}
+
+.ubicacion{
+  cursor: pointer;
+}
