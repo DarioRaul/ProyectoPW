@@ -16,6 +16,10 @@ class UsersRoutes {
     }
     config() {
         this.router.get('/', usersControllers_1.default.list);
+        this.router.post('/', usersControllers_1.default.create);
+        this.router.delete('/:id', usersControllers_1.default.delete);
+        this.router.put('/:id', usersControllers_1.default.update);
+        this.router.get('/:id', usersControllers_1.default.getOne);
     }
     getToken() {
         this.router.post('/singin', usersControllers_1.default.gettoken);

@@ -16,7 +16,7 @@ export class AuthService {
   constructor(private http: HttpClient, private jwtHelper:JwtHelperService) { }
 
   getUsuarios():Observable<User[]>{
-    return  this.http.get<User[]>(`${this.API_URI}/usuario`);
+    return  this.http.get<User[]>(`${this.API_URI}/usuarios`);
   }
 
   signIn(user:User){

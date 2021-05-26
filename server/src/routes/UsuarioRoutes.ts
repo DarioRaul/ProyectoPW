@@ -10,8 +10,6 @@ class UsuarioRoutes{
     config():void{
         this.router.get('/',UsuarioControllers.list);
         this.router.get('/:id',UsuarioControllers.getOneUsuario);
-        this.router.get('/singin',UsuarioControllers.getTipoUsuario);
-       
     }
 }
 export const usuarioRoutes = new UsuarioRoutes();

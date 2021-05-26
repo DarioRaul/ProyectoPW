@@ -11,14 +11,21 @@ export class UsersControllers{
        res.json(users);
        }
 
-      
-  
-     public async create(req : Request, res: Response): Promise<void>{
+    public async create(req : Request, res: Response): Promise<void>{
         await pool.query('INSERT INTO usuarios set ?', [req.body]);
         console.log(req.body);
         res.json({message: 'Usuario creado'}); 
     }
   
+    public async getOne (req: Request, res: Response) : Promise<void> {
+        const { id }=req.params;
+        const usuario = await pool.query('SELECT * FROM usuarios WHERE id_user = ?',[id]);
+        if(usuario.length>0){
+            res.json(usuario[0]);     
+        }
+        res.status(404).json({text:'El usuario no ha sido encontrado'})
+    }
+
     public async delete(req: Request, res: Response): Promise<void>{
      const { id } = req.params;
      await pool.query('DELETE FROM usuarios WHERE id_user = ?', [id]);
@@ -30,9 +37,6 @@ export class UsersControllers{
      await pool.query('UPDATE usuarios set ? WHERE id_user = ?', [req.body,id]);
      res.json({message: 'Datos actualizados'});
     }
-
-    
-       
 
     public async gettoken(req:Request,res:Response){
         const {email, password}= req.body;
@@ -68,13 +72,7 @@ export class UsersControllers{
        secret=(req:Request,res:Response)=>{
 
        res.json('informacion secreta')
-       }
-
-
-
-
-    
-       
+       }  
     }
     
 

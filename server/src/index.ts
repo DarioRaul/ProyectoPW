@@ -8,6 +8,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import usersRoutes  from './routes/usersRoutes';
 import UsuarioRoutes from './routes/UsuarioRoutes';
+import Tipo_UsuarioRoutes from './routes/Tipo_UsuarioRoutes';
 
 
 class Server{
@@ -25,12 +26,13 @@ class Server{
   this.app.use(express.urlencoded({extended: false}));
   }
   routes():void{
-  this.app.use('/',indexRoutes);
 
+  this.app.use('/',indexRoutes);
   this.app.use('/users',usersRoutes);
-  this.app.use('/usuario',UsuarioRoutes);
-  this.app.use(passport.initialize());
-  this.app.use(passport.session());
+  this.app.use('/usuarios',usersRoutes);
+  this.app.use('/usuarios',UsuarioRoutes);
+  this.app.use('/add', Tipo_UsuarioRoutes);
+
   }
 
   start():void{

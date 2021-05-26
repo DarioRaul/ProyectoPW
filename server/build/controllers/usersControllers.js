@@ -48,6 +48,16 @@ class UsersControllers {
             res.json({ message: 'Usuario creado' });
         });
     }
+    getOne(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { id } = req.params;
+            const usuario = yield database_1.default.query('SELECT * FROM usuarios WHERE id_user = ?', [id]);
+            if (usuario.length > 0) {
+                res.json(usuario[0]);
+            }
+            res.status(404).json({ text: 'El usuario no ha sido encontrado' });
+        });
+    }
     delete(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;

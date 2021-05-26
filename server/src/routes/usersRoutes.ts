@@ -10,23 +10,26 @@ class UsersRoutes{
         this.getToken();
         this.secretInfo();
         this.secret();
-      
     }
 
     config():void{
         this.router.get('/',usersController.list); 
+        this.router.post('/', usersController.create);
+        this.router.delete('/:id',usersController.delete);
+        this.router.put('/:id', usersController.update);
+        this.router.get('/:id', usersController.getOne );
     }
 
 
-  getToken():void{
+    getToken():void{
         this.router.post('/singin',usersController.gettoken);
-  }
-  secretInfo():void{
+    }
+    secretInfo():void{
     this.router.post('/test',usersController.secretinfo);
- } 
- secret():void{
+    } 
+    secret():void{
     this.router.post('/test',usersController.secret);
- } 
+    } 
  
 
 
