@@ -8,72 +8,19 @@
       <div>
         <button (click)="changeMonth(1)" class="btn-next">⇒</button>
       </div>
-    </div>
-    <ol>
+      </div>
+      <ol>
       <li *ngFor="let day of week" class="day-name">{{ day | slice: 0:3 }}</li>
       <li
-        href="#ventana1"
         class="btn btn-primary btn-lg"
         class="dias"
-        data-toggle="modal"
         (click)="clickDay(day)"
         [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
         *ngFor="let day of monthSelect; let first = first"
       >
         <span>{{ day?.value }}</span>
       </li>
-    </ol>
-  </div>
-  <div class="generator">
-    <div class="modal fade" id="ventana1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2 class="modal-tittle">Nuevo Evento</h2>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-hidden="true"
-            >
-              &times;
-            </button>
-          </div>
-          <div class="modal-body">
-            <h4 for="Fecha">FECHA: {{dateValue | date}}</h4>
-            <label for="nombre-evento" class="col-form-label">Nombre del evento:</label>
-            <input type="text" class="form-control" >
-            <br>
-            <label for="desc-evento" class="col-form-label">Descripcion del evento:</label>
-            <textarea class="form-control" id="desc-evento"></textarea>
-            <br>
-            <label for="Hora">Hora:</label>
-
-            <br>
-            <input atp-time-picker value="10:00" class="hora">
-            <br> <br>
-            <label for="Grupo">Grupo:</label>
-            <br>
-            <select name="Grupos" id="Grupos">
-              <option value="0">Guardería</option>
-              <option value="0">1 Kínder</option>
-              <option value="1">2 Kínder</option>
-              <option value="2">3 Kínder</option>
-              <option value="3">Club de tareas</option>
-            </select>
-            <br>
-            <input atp-time-picker value="10:00"  class="hora">
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">
-              Cancelar
-            </button>
-            <button type="button" class="btn btn-primary" >Guardar</button>
-          </div>
-        </div>
-      </div>
-    </div>
+      </ol>
   </div>
 </div>
 

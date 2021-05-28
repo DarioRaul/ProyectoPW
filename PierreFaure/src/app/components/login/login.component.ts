@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
     )
   }
 
+
   loginIn(){
     console.log(this.user);
     this.authService.signIn(this.user).subscribe((res:any) =>{

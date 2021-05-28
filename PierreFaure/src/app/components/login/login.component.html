@@ -33,12 +33,17 @@
                 <label for="password">Contraseña: </label>
               </li>
               <li>
-            <input type="password" id="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}"  required>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}"  required>
               </li>
             </ul>
-            <br>
+              <div class="tipo_user">
+                <input  type="radio" id="admin" name="tipousuario" value="1" [(ngModel)]="user.id_tipo_usuario" [ngModelOptions]="{standalone: true}">
+                <label  for="admin">Admin</label><br>
+                <input  type="radio" id="alumno" name="tipousuario" value="2" [(ngModel)]="user.id_tipo_usuario" [ngModelOptions]="{standalone: true}">
+                <label  for="alumno">Alumno</label><br>
+              </div>
+            <button class="login" type="submit" style="cursor: pointer;" (click)="loginIn()">Iniciar Sesión</button>
         </form>
-        <button type="submit" style="cursor: pointer;" (click)="loginIn()">Iniciar Sesión</button>
       </div>
     </li>
   </ul>

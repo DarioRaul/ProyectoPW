@@ -19,7 +19,7 @@
   display: inline-block;
   margin-left: 200px;
   font-size: 30px;
-  height: 380px;
+  height: 500px;
   color: white;
 }
 
@@ -29,6 +29,10 @@ input{
   margin-bottom: 2%;
   width: 200px;
   padding-top: 15px;
+}
+
+.login{
+  margin-top: 0%;
 }
 
 
@@ -66,6 +70,33 @@ h1 {
 ul{
   list-style: none;
   display: block;
+}
+
+.alumno{
+  margin-left: 2%;
+}
+
+.admin{
+  margin-left: 2%;
+  border: 1px solid black;
+}
+
+.tipo_user{
+  margin-top: 7%;
+  margin-bottom: 3%;
+  display: flex;
+  font-size:medium;
+}
+
+.tipo_user input{
+  margin-left: 20%;
+  width: 50px;
+  cursor: pointer;
+}
+
+.tipo_user label{
+  margin-left: 2%;
+  cursor: pointer;
 }
 
 .contenido {

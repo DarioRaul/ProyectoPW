@@ -72,7 +72,8 @@ export class UsersControllers{
        secret=(req:Request,res:Response)=>{
 
        res.json('informacion secreta')
-       }  
+       } 
+
     }
     
 

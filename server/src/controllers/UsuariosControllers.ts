@@ -20,12 +20,13 @@ class UsuarioControllers{
 
     public async getTipoUsuario(req:Request, res:Response){
         const {email}= req.body;
-        const usuarios = await pool.query('SELECT id_tipo_usuario FROM usuarios where id_user = ?', [email])  
+        const usuarios = await pool.query('SELECT id_tipo_usuario FROM usuarios where email = ?', [email])  
         if(usuarios.length>0){
             return res.json(usuarios[0]);     
         }
         res.status(404).json({text:'El usuario no ha sido encontrado'})
     }
+
     
     
 }

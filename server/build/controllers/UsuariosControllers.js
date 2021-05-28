@@ -33,7 +33,7 @@ class UsuarioControllers {
     getTipoUsuario(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { email } = req.body;
-            const usuarios = yield database_1.default.query('SELECT id_tipo_usuario FROM usuarios where id_user = ?', [email]);
+            const usuarios = yield database_1.default.query('SELECT id_tipo_usuario FROM usuarios where email = ?', [email]);
             if (usuarios.length > 0) {
                 return res.json(usuarios[0]);
             }
