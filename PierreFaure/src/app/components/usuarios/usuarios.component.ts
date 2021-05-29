@@ -8,12 +8,14 @@ import { Router } from '@angular/router';
 })
 export class UsuariosComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  // tslint:disable-next-line: typedef
   irInicioSesion(){
-    this.router.navigate(['login'])
+    localStorage.removeItem('token');
+    this.router.navigate(['login']);
   }
 }

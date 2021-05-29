@@ -23,7 +23,8 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { FormsModule } from '@angular/forms';
 import { AmazingTimePickerModule } from 'amazing-time-picker';
 import { Tipo_UsuarioService } from './services/tipos_usuarios.service';
-import { JwtHelperService, JWT_OPTIONS }  from '@auth0/angular-jwt'
+// tslint:disable-next-line: import-spacing
+import { JwtHelperService, JWT_OPTIONS }  from '@auth0/angular-jwt';
 
 @NgModule({
   declarations: [

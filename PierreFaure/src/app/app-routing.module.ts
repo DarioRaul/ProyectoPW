@@ -10,7 +10,9 @@ import { ServiciosComponent } from './components/pagina/servicios/servicios.comp
 import { PagosComponent } from './components/pagos/pagos.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { UserListComponent } from './components/user-list/user-list.component';
-
+import {RolGuard } from './guards/rol.guard';
+import { RolGuard2 } from './guards/rol2.guard';
+import {AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
   {
     path: '' ,
@@ -47,19 +49,23 @@ const routes: Routes = [
   },
   {
     path: 'pagos',
-    component:PagosComponent
+    component: PagosComponent
   },
   {
-    path :'login',
-    component:LoginComponent
+    path : 'login',
+    component: LoginComponent
   },
   {
     path : 'admin',
-    component:AdministradorComponent
+    component: AdministradorComponent,
+    canActivate: [RolGuard, AuthGuard],
+    data: {expectedRole: 'admin'}
   },
   {
     path : 'profile',
-    component:PadreFamiliaComponent
+    component: PadreFamiliaComponent,
+    canActivate: [RolGuard2],
+    data: {expectedRole: 'alumno'}
   },
 
 

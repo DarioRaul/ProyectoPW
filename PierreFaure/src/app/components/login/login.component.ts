@@ -10,41 +10,44 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  User:any=[];
+  User: any = [];
 
-  user : User = {
+  user: User = {
     email: '',
     password: '',
-    id_tipo_usuario:''
+    id_tipo_usuario: ''
   };
 
 
 
-  constructor(private authService:AuthService, private router:Router) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.authService.getUsuarios()
     .subscribe(
-      res =>{
+      res => {
         console.log(res);
-        this.User=res;
+        this.User = res;
       },
-      err=> console.error(err)
-    )
+      err => console.error(err)
+    );
   }
 
 
+  // tslint:disable-next-line: typedef
   loginIn(){
     console.log(this.user);
-    this.authService.signIn(this.user).subscribe((res:any) =>{
+    this.authService.signIn(this.user).subscribe((res: any) => {
       console.log(res);
       console.log(res.token);
       localStorage.setItem('token', res.token);
-     if(this.user.id_tipo_usuario == '1'){
-       this.router.navigate(['admin'])
-     }else{
-       this.router.navigate(['profile'])
+      // tslint:disable-next-line: triple-equals
+      if (this.user.id_tipo_usuario == '1'){
+       this.router.navigate(['admin']);
+     // tslint:disable-next-line: triple-equals
+     }else if (this.user.id_tipo_usuario == '2'){
+       this.router.navigate(['profile']);
      }
-    })
+    });
   }
 }
