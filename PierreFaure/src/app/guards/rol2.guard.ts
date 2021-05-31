@@ -20,9 +20,9 @@ export class RolGuard2 implements CanActivate {
     // tslint:disable-next-line: no-non-null-assertion
     abc = decode(token!);
     console.log(abc.role);
-
-    if ( abc.role !== expectedRole){
+    if ( abc.role === expectedRole){
     console.log('usuario no autorizado');
+    alert('Credenciales Incorrectas, vuelve a intentarlo.');
     return false;
   }
 

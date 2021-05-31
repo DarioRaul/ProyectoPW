@@ -59,13 +59,13 @@ const routes: Routes = [
     path : 'admin',
     component: AdministradorComponent,
     canActivate: [RolGuard, AuthGuard],
-    data: {expectedRole: 'admin'}
+    data: {expectedRole: 1}
   },
   {
     path : 'profile',
     component: PadreFamiliaComponent,
     canActivate: [RolGuard2],
-    data: {expectedRole: 'alumno'}
+    data: {expectedRole: 2}
   },
 
 
