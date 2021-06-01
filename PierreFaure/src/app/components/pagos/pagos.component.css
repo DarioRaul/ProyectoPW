@@ -81,3 +81,42 @@ padding: 2%;
 ::-webkit-scrollbar {
 display: none;
 }
+
+.cancelar{
+  padding: 5px 10px 5px 10px;
+  border-radius: 20%;
+  cursor: pointer;
+  margin-right: 5%;
+  background: red;
+  color: white;
+  transition: background .4s, color .4s;
+  }
+
+  .cancelar:hover{
+  background: white;
+  color: red;
+  }
+
+  .pago:hover{
+  background: #273c75;
+  color: #dcdde1;
+  }
+
+  .boton{
+    padding: 1.5%;
+    }
+
+  .pago{
+      padding: 5px 10px 5px 10px;
+      border-radius: 20%;
+      cursor: pointer;
+      background: #dcdde1;
+      border: 2px solid #273c75;
+      color: #273c75;
+      transition: background .4s, color .4s;
+      }
+
+  .boton {
+        text-align: center;
+        display: block;
+        }
